@@ -1,0 +1,609 @@
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Everlusting Life</title>
+    <link rel="icon" href="favicon.webp" type="image/webp" sizes="233x233">
+
+    <link rel="preload" href="./bg.webp" as="image">
+    <link rel="preload" href="./cursor.webp" as="image">
+    <link rel="preload" href="./1.webp" as="image">
+    <link rel="preload" href="./1_1.webp" as="image">
+    <link rel="preload" href="./2.webp" as="image">
+    <link rel="preload" href="./2_1.webp" as="image">
+    <link rel="preload" href="./3.webp" as="image">
+    <link rel="preload" href="./3_1.webp" as="image">
+
+    <script>
+    function goToSite() {
+    window.location.href = "https://click.playeverlustinglife.com/click";
+}
+</script>
+
+
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html,
+        .inner-card {
+            cursor: none;
+        }
+
+        body {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            background-color: rgb(178, 219, 255);
+            background-image: url(./bg.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            bottom: -10vh;
+            left: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 4vh;
+            width: 100vw;
+            z-index: 10;
+        }
+
+        .label {
+            position: absolute;
+            width: 50%;
+            top: 3vh;
+            left: 25%;
+            -webkit-animation: pulse 1.5s infinite;
+            animation: pulse 1.5s infinite;
+        }
+
+        .cards {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 1vw;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding: 0 6vh;
+            width: 100vw;
+            max-height: 95vh;
+        }
+
+        .inner-card {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+        }
+
+        .inner-card img {
+            width: 22vw;
+            -o-object-fit: contain;
+            object-fit: contain;
+            -webkit-transition: transform 0.2s;
+            -webkit-transition: -webkit-transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
+            -webkit-animation: scale 1.5s infinite;
+            animation: scale 1.5s infinite;
+            z-index: 1;
+            margin-top: 5vw;
+        }
+
+        .card:nth-of-type(1) .inner-card img {
+            width: 30vw;
+        }
+
+        .card:nth-of-type(3) .inner-card img {
+            width: 32vw;
+        }
+
+        .card:nth-of-type(2) .inner-card {
+            -webkit-animation-delay: 0.33s;
+            animation-delay: 0.33s;
+        }
+
+        .card:nth-of-type(3) .inner-card {
+            -webkit-animation-delay: 0.66s;
+            animation-delay: 0.66s;
+        }
+
+        .face-card {
+            width: 13vw;
+            position: absolute;
+            z-index: 1;
+            -o-object-fit: cover;
+            object-fit: cover;
+            top: -4vw;
+        }
+
+        .card:nth-of-type(1) .face-card {
+            left: 13vw;
+        }
+
+        .card:nth-of-type(2) .face-card {
+            top: -1vw;
+        }
+
+        .card:nth-of-type(3) .face-card {
+            top: -2vw;
+            right: 15vw;
+        }
+
+        .inner-card:hover {
+            -webkit-animation: rotation 2s ease-in-out infinite;
+            animation: rotation 2s ease-in-out infinite;
+            -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+        }
+
+        .card:nth-of-type(1) .inner-card:hover {
+            -webkit-animation: reverse-rotation 2s ease-in-out infinite;
+            animation: reverse-rotation 2s ease-in-out infinite;
+            -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+        }
+
+        .inner-card:hover img {
+            -webkit-animation: hover-scale 0.2s forwards;
+            animation: hover-scale 0.2s forwards;
+        }
+
+        .inner-card:not(:hover) {
+            -webkit-animation: small-rotation 3s ease-in-out infinite !important;
+            animation: small-rotation 3s ease-in-out infinite !important;
+        }
+
+        .card {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100vw;
+        }
+
+        .marker-1,
+        .hand-1,
+        .marker-2,
+        .hand-2,
+        .marker-3,
+        .marker-3-1 {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .marker-1 {
+            bottom: 10%;
+            left: 13%;
+            width: 10vw;
+        }
+
+        .hand-1 {
+            bottom: 73%;
+            left: 2%;
+            width: 10vw;
+        }
+
+        .marker-2 {
+            bottom: 10%;
+            left: 42%;
+            width: 8vw;
+        }
+
+        .hand-2 {
+            bottom: 75%;
+            left: 55%;
+            width: 7vw;
+        }
+
+        .marker-3 {
+            top: 2%;
+            right: 9%;
+            width: 6vw;
+        }
+
+        .marker-3-1 {
+            top: 77%;
+            right: 18%;
+            width: 7vw;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 12vw;
+            height: 12vw;
+            background-image: url(./cursor.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            display: block;
+        }
+
+        @-webkit-keyframes hover-scale {
+            to {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes hover-scale {
+            to {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+        }
+
+        @-webkit-keyframes scale {
+            0%,
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.01);
+                transform: scale(1.01);
+            }
+        }
+
+        @keyframes scale {
+            0%,
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.01);
+                transform: scale(1.01);
+            }
+        }
+
+        @-webkit-keyframes pulse {
+            0%,
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+            }
+        }
+
+        @-webkit-keyframes rotation {
+            0%,
+            50%,
+            100% {
+                -webkit-transform: rotate(0deg) translateY(0);
+                transform: rotate(0deg) translateY(0);
+            }
+            25% {
+                -webkit-transform: rotate(4deg) translateY(1vh);
+                transform: rotate(4deg) translateY(1vh);
+            }
+            75% {
+                -webkit-transform: rotate(-4deg) translateY(1vh);
+                transform: rotate(-4deg) translateY(1vh);
+            }
+        }
+
+        @keyframes rotation {
+            0%,
+            50%,
+            100% {
+                -webkit-transform: rotate(0deg) translateY(0);
+                transform: rotate(0deg) translateY(0);
+            }
+            25% {
+                -webkit-transform: rotate(4deg) translateY(1vh);
+                transform: rotate(4deg) translateY(1vh);
+            }
+            75% {
+                -webkit-transform: rotate(-4deg) translateY(1vh);
+                transform: rotate(-4deg) translateY(1vh);
+            }
+        }
+
+        @-webkit-keyframes reverse-rotation {
+            0%,
+            50%,
+            100% {
+                -webkit-transform: rotate(0deg) translateY(0);
+                transform: rotate(0deg) translateY(0);
+            }
+            25% {
+                -webkit-transform: rotate(4deg) translateY(-1vh);
+                transform: rotate(4deg) translateY(-1vh);
+            }
+            75% {
+                -webkit-transform: rotate(-4deg) translateY(-1vh);
+                transform: rotate(-4deg) translateY(-1vh);
+            }
+        }
+
+        @keyframes reverse-rotation {
+            0%,
+            50%,
+            100% {
+                -webkit-transform: rotate(0deg) translateY(0);
+                transform: rotate(0deg) translateY(0);
+            }
+            25% {
+                -webkit-transform: rotate(4deg) translateY(-1vh);
+                transform: rotate(4deg) translateY(-1vh);
+            }
+            75% {
+                -webkit-transform: rotate(-4deg) translateY(-1vh);
+                transform: rotate(-4deg) translateY(-1vh);
+            }
+        }
+
+        @-webkit-keyframes small-rotation {
+            0%,
+            50%,
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(1deg);
+                transform: rotate(1deg);
+            }
+            75% {
+                -webkit-transform: rotate(-1deg);
+                transform: rotate(-1deg);
+            }
+        }
+
+        @keyframes small-rotation {
+            0%,
+            50%,
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(1deg);
+                transform: rotate(1deg);
+            }
+            75% {
+                -webkit-transform: rotate(-1deg);
+                transform: rotate(-1deg);
+            }
+        }
+
+        .legal-footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-family: sans-serif;
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.5);
+            opacity: 0.3;
+            padding: 0.6rem 0;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .legal-footer a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            margin: 0 0.4rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .legal-footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .legal-footer {
+                display: none;
+            }
+        }
+
+        .legal-footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-family: sans-serif;
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.5);
+            opacity: 0.3;
+            padding: 0.6rem 0;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .legal-footer a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            margin: 0 0.4rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .legal-footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .legal-footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <img src="./pants_1.webp" class="face-card">
+                <div onclick="goToSite()" class="inner-card">
+                    <img src="./1.webp" src-hover="./1_1.webp">
+                </div>
+                <img class="marker-1" src="./marker_1.webp">
+                <img class="hand-1" src="./hand_1.webp">
+            </div>
+            <div class="card">
+                <img src="./pants_2.webp" class="face-card">
+                <div onclick="goToSite()" class="inner-card">
+                    <img src="./2.webp" src-hover="./2_1.webp">
+                </div>
+                <img class="hand-2" src="./hand_2.webp">
+                <img class="marker-2" src="./marker_2.webp">
+            </div>
+            <div class="card">
+                <img src="./pants_3.webp" class="face-card">
+                <div onclick="goToSite()" class="inner-card">
+                    <img class="main-image" src="./3.webp" src-hover="./3_1.webp">
+                </div>
+                <img class="marker-3" src="./marker_3.webp">
+                <img class="marker-3-1" src="./marker_3_1.webp">
+            </div>
+        </div>
+    </div>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        window.addEventListener('mousemove', (event) => {
+            const relativeX = (event.clientX / window.innerWidth) * 100;
+            const relativeY = (event.clientY / window.innerHeight) * 100;
+
+            cursor.style.left = `${relativeX + 5}vw`;
+            cursor.style.top = `${relativeY + 10}vh`;
+        });
+
+        document.querySelectorAll('.inner-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('img');
+                img.setAttribute('src-original', img.src);
+                img.src = img.getAttribute('src-hover');
+            });
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                img.src = img.getAttribute('src-original');
+            });
+        });
+    </script>
+   <footer class="legal-footer">
+  <div class="legal-inner">
+    <a href="/legal/tos.html" target="_blank">Terms and Conditions</a> ·
+    <a href="/legal/privacy.html" target="_blank">Privacy Policy</a> ·
+    <a href="mailto:info@example.com">Contact</a><br>
+    <small>This site promotes fictional content. No downloads.</small><br>
+  </div>
+</footer>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" 
+     id="share-buttons"
+     data-a2a-url="https://playeverlustinglife.com/share" 
+     style="left:0px; top:150px;">
+  <a class="a2a_button_facebook"></a>
+  <a class="a2a_button_whatsapp"></a>
+  <a class="a2a_button_x"></a>
+  <a class="a2a_button_reddit"></a>
+  <a class="a2a_button_copy_link"></a>
+</div>
+
+<script>
+  // Define share message variations
+  const titles = [
+    "Play Everlusting Life with me!",
+    "Join me in the world of Everlusting Life!",
+    "Ready to dive into Everlusting Life?",
+    "Come play Everlusting Life — it’s wild!",
+    "Let’s explore Everlusting Life together!",
+    "Discover Everlusting Life — I'm playing now!"
+  ];
+
+  // Pick a random one
+  const randomTitle = titles[Math.floor(Math.random() * titles.length)];
+
+  // Apply it to the share widget
+  document.getElementById('share-buttons').setAttribute('data-a2a-title', randomTitle);
+
+  // Optional: If you want AddToAny to load with this new title
+  var a2a_config = a2a_config || {};
+  a2a_config.num_services = 6;
+</script>
+
+<script defer src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+</body>
+
+</html>
